@@ -1,0 +1,75 @@
+---
+title: "R practice"
+output: html_notebook
+---
+
+TODO
+
+* Check our linters
+* Using git in Rstudio - better way than terminal?
+* Groupby type commands
+
+Key libraries
+
+* ggplot2
+* bigrquery
+* tibble
+* rmarkdown
+* dplyr
+
+Resources
+
+* [Pandas R comparison](https://pandas.pydata.org/pandas-docs/stable/getting_started/comparison/comparison_with_r.html)
+* [learn X in Y](https://learnxinyminutes.com/docs/r/)
+* [ggplot2 book](https://github.com/hadley/ggplot2-book)
+* [Advanced R book](http://adv-r.had.co.nz/)
+* [Advanced R book chapter on style](http://adv-r.had.co.nz/Style.html)
+* [Guide to Rstudio notebooks - like this one!](https://bookdown.org/yihui/rmarkdown/notebook.html)
+
+Datasets
+* 
+* https://www.kaggle.com/paultimothymooney/how-to-query-the-world-bank-education-data
+* https://www.kaggle.com/dipam7/student-grade-prediction
+
+Rmarkdown
+
+* *Cmd+Shift+k* -- preview notebook
+* *Cmd+Shift+Enter* -- run code in chunk
+
+
+R
+
+```{r}
+data(cars)
+# head(cars) #first 5 rows
+# names(cars) #column names
+# ?libraryname #help
+# library(libraryname) #import
+# a <- 4 #assignment
+# dim(cars) #dimensions
+```
+
+## Tibbles
+Improvements on dataframes
+
+```{r}
+library(tibble)
+cars_tibble <- as_tibble(cars)
+cars_tibble["speed"] # filter by column name
+```
+
+## Dplyr
+
+Functions like groupby, apply etc
+Also the %
+```{r}
+library(dplyr)
+vignette("dplyr")
+install.packages("nycflights13")
+library(nycflights13)
+dim(flights)
+```
+
+```{r}
+head(flights)
+```
